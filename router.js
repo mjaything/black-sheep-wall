@@ -7,5 +7,5 @@ const handleUserEdit = (req, res) => res.send("user edit");
 const handleUserPassword = (req, res) => res.send("user password");
 
 userRouter.get("/", handleUserIndex);
-userRouter.get("/", handleUserEdit);
-userRouter.get("/", handleUserPassword);
+userRouter.get("/edit", handleUserEdit);
+userRouter.get("/password", handleUserPassword);
