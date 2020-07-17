@@ -2,6 +2,7 @@ import express from "express";
 import morgan from "morgan";
 import helmet from "helmet";
 import cookieParser from "cookie-parser";
+import bodyParser from "body-parser";
 const app = express();
 const PORT = 4000;
 
@@ -20,6 +21,9 @@ app.use(helmet());
 
 // middleware to parse cookie
 app.use(cookieParser());
+
+// middleware to parse incoming request bodies
+app.use(bodyParser());
 
 app.get("/", handleHome);
 app.get("/profile", handleProfile);
