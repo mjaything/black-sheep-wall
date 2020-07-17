@@ -1,5 +1,7 @@
 import express from "express";
 import morgan from "morgan";
+import helmet from "helmet";
+import cookieParser from "cookie-parser";
 const app = express();
 const PORT = 4000;
 
@@ -12,6 +14,11 @@ app.listen(PORT, handleListening);
 
 // middleware logger
 app.use(morgan("dev"));
+
+// middleware to secure Express apps
+app.use(helmet());
+
+app.use(cookieParser());
 
 app.get("/", handleHome);
 app.get("/profile", handleProfile);
