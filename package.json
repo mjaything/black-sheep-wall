@@ -18,7 +18,7 @@
     "nodemon": "^2.0.4"
   },
   "scripts": {
-    "start": "nodemon --exec babel-node index.js --dealy 2",
+    "start": "nodemon --exec babel-node init.js --dealy 2",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
