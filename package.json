@@ -1,0 +1,23 @@
+{
+  "name": "black-sheep-wall",
+  "version": "1.0.0",
+  "description": "Developing StarCraft Replay Video Sharing Website with Vanilla and NodeJS",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mjaything/black-sheep-wall.git"
+  },
+  "author": "Minjun Kim",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mjaything/black-sheep-wall/issues"
+  },
+  "homepage": "https://github.com/mjaything/black-sheep-wall#readme"
+}
