@@ -18,6 +18,7 @@ app.use(morgan("dev"));
 // middleware to secure Express apps
 app.use(helmet());
 
+// middleware to parse cookie
 app.use(cookieParser());
 
 app.get("/", handleHome);
