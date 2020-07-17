@@ -5,8 +5,8 @@ import cookieParser from "cookie-parser";
 import bodyParser from "body-parser";
 const app = express();
 
-const handleProfile = (request, response) => console.log("Profile");
-const handleHome = (request, response) => response.send("Home");
+const handleProfile = (req, res) => res.send("Profile");
+const handleHome = (req, res) => res.send("Home");
 
 // middleware logger
 app.use(morgan("dev"));
