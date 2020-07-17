@@ -23,3 +23,5 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get("/", handleHome);
 app.get("/profile", handleProfile);
+
+export default app;
