@@ -23,7 +23,8 @@ app.use(helmet());
 app.use(cookieParser());
 
 // middleware to parse incoming request bodies
-app.use(bodyParser());
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get("/", handleHome);
 app.get("/profile", handleProfile);
