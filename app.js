@@ -7,9 +7,6 @@ import { userRouter } from "./router";
 
 const app = express();
 
-const handleProfile = (req, res) => res.send("Profile");
-const handleHome = (req, res) => res.send("Home");
-
 // middleware logger
 app.use(morgan("dev"));
 
@@ -23,8 +20,6 @@ app.use(cookieParser());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.get("/", handleHome);
-app.get("/profile", handleProfile);
 app.use("/user", userRouter);
 
 export default app;
