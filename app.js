@@ -6,8 +6,13 @@ import bodyParser from "body-parser";
 import globalRouter from "./routers/globalRouter";
 import userRouter from "./routers/userRouter";
 import videoRouter from "./routers/videoRouter";
+import routes from "./routes";
 
+// a function representing express module
 const app = express();
+
+// assigns setting view engine to pug
+app.set("view engine", "pug");
 
 // middleware logger
 app.use(morgan("dev"));
@@ -22,8 +27,8 @@ app.use(cookieParser());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use("/", globalRouter);
-app.use("/user", userRouter);
-app.use("/video", videoRouter);
+app.use(routes.home, globalRouter);
+app.use(routes.user, userRouter);
+app.use(routes.video, videoRouter);
 
 export default app;
