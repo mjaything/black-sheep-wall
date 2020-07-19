@@ -11,14 +11,11 @@ import routes from "./routes";
 // a function representing express module
 const app = express();
 
-// assigns setting view engine to pug
-app.set("view engine", "pug");
-
-// middleware logger
-app.use(morgan("dev"));
-
 // middleware to secure Express apps
 app.use(helmet());
+
+// assigns setting view engine to pug
+app.set("view engine", "pug");
 
 // middleware to parse cookie
 app.use(cookieParser());
@@ -26,6 +23,9 @@ app.use(cookieParser());
 // middleware to parse incoming request bodies
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+
+// middleware logger
+app.use(morgan("dev"));
 
 app.use(routes.home, globalRouter);
 app.use(routes.user, userRouter);
