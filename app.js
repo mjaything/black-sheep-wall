@@ -3,10 +3,11 @@ import morgan from "morgan";
 import helmet from "helmet";
 import cookieParser from "cookie-parser";
 import bodyParser from "body-parser";
+import { localsMiddleware } from "./middlewares";
+import routes from "./routes";
 import globalRouter from "./routers/globalRouter";
 import userRouter from "./routers/userRouter";
 import videoRouter from "./routers/videoRouter";
-import routes from "./routes";
 
 // a function representing express module
 const app = express();
@@ -26,6 +27,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // middleware logger
 app.use(morgan("dev"));
+
+// middleware for local variables
+app.use(localsMiddleware);
 
 app.use(routes.home, globalRouter);
 app.use(routes.user, userRouter);
