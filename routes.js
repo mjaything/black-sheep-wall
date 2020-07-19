@@ -1,8 +1,8 @@
 // Global
 const HOME = "/";
-const JOIN = "/join";
-const LOGIN = "/login";
-const LOGOUT = "/logout";
+const SIGNUP = "/sign-up";
+const LOGIN = "/log-in";
+const LOGOUT = "/log-out";
 const SEARCH = "/search";
 
 // User
@@ -21,9 +21,9 @@ const DELETE_VIDEO = "/:id/delete";
 // Object
 const routes = {
   home: HOME,
-  join: JOIN,
-  login: LOGIN,
-  logout: LOGOUT,
+  signUp: SIGNUP,
+  logIn: LOGIN,
+  logOut: LOGOUT,
   search: SEARCH,
   user: USER,
   userInfo: USER_INFO,
