@@ -16,10 +16,13 @@ export const postSignUp = (req, res) => {
   }
 };
 
+export const getLogIn = (req, res) =>
+  res.render("logIn", { pageTitle: "Log In" });
+export const postLogIn = (req, res) => res.redirect(routes.home);
+
 export const user = (req, res) => res.render("user", { pageTitle: "User" });
 export const userInfo = (req, res) =>
   res.render("userInfo", { pageTitle: "User Info" });
-export const logIn = (req, res) => res.render("logIn", { pageTitle: "Log In" });
 export const logOut = (req, res) =>
   res.render("logOut", { pageTitle: "Log Out" });
 export const editProfile = (req, res) =>
