@@ -1,8 +1,24 @@
+import routes from "../routes";
+
+export const getSignUp = (req, res) => {
+  res.render("signUp", { pageTitle: "Sign Up" });
+};
+
+export const postSignUp = (req, res) => {
+  const {
+    body: { name, email, password, confirmPassword },
+  } = req;
+  if (password !== confirmPassword) {
+    res.status(400);
+    res.render("signUp", { pageTitle: "Sign Up" });
+  } else {
+    res.redirect(routes.home);
+  }
+};
+
 export const user = (req, res) => res.render("user", { pageTitle: "User" });
 export const userInfo = (req, res) =>
   res.render("userInfo", { pageTitle: "User Info" });
-export const signUp = (req, res) =>
-  res.render("signUp", { pageTitle: "Sign Up" });
 export const logIn = (req, res) => res.render("logIn", { pageTitle: "Log In" });
 export const logOut = (req, res) =>
   res.render("logOut", { pageTitle: "Log Out" });
