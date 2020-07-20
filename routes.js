@@ -1,3 +1,5 @@
+import e from "express";
+
 // Global
 const HOME = "/";
 const SIGNUP = "/sign-up";
@@ -26,11 +28,23 @@ const routes = {
   logOut: LOGOUT,
   search: SEARCH,
   user: USER,
-  userInfo: USER_INFO,
+  userInfo: (id) => {
+    if (id) {
+      return `/users/${id}`;
+    } else {
+      return USER_INFO;
+    }
+  },
   editProfile: EDIT_PROFILE,
   changePassword: CHANGE_PASSWORD,
   video: VIDEO,
-  videoInfo: VIDEO_INFO,
+  videoInfo: (id) => {
+    if (id) {
+      return `/videos/${id}`;
+    } else {
+      return VIDEO_INFO;
+    }
+  },
   uploadVideo: UPLOAD_VIDEO,
   editVideo: EDIT_VIDEO,
   deleteVideo: DELETE_VIDEO,
