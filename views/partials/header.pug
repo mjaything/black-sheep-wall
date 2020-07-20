@@ -7,7 +7,7 @@ header.header
             input(type="text", name="keyword", placeholder="Search")
     .header__column
         ul
-            if user.isAuthenticated
+            if !user.isAuthenticated
                 li
                     a(href=routes.logIn) Log In
                 li
@@ -16,6 +16,6 @@ header.header
                 li
                     a(href=routes.uploadVideo) Upload Video
                 li
-                    a(href=routes.userInfo) User Info
+                    a(href=routes.userInfo(user.id)) User Info
                 li
                     a(href=routes.logOut) Log Out
