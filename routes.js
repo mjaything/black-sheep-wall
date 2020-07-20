@@ -13,8 +13,8 @@ const CHANGE_PASSWORD = "/change-password";
 
 // Video
 const VIDEO = "/video";
-const VIDEO_INFO = "/:id";
 const UPLOAD_VIDEO = "/upload";
+const VIDEO_INFO = "/:id";
 const EDIT_VIDEO = "/:id/edit";
 const DELETE_VIDEO = "/:id/delete";
 
