@@ -30,7 +30,7 @@ const routes = {
   user: USER,
   userInfo: (id) => {
     if (id) {
-      return `/users/${id}`;
+      return `/user/${id}`;
     } else {
       return USER_INFO;
     }
@@ -40,7 +40,7 @@ const routes = {
   video: VIDEO,
   videoInfo: (id) => {
     if (id) {
-      return `/videos/${id}`;
+      return `/video/${id}`;
     } else {
       return VIDEO_INFO;
     }
