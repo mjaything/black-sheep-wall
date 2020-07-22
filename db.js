@@ -1,7 +1,9 @@
 import mongoose from "mongoose";
+import dotenv from "dotenv";
+dotenv.config();
 
 // open a connection to black-sheep-wall database on MongoDB instance
-mongoose.connect("mongodb://localhost:27017/black-sheep-wall", {
+mongoose.connect(process.env.MONGODB_URL, {
   useNewUrlParser: true,
   useFindAndModify: false,
 });
